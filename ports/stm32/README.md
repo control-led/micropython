@@ -136,6 +136,13 @@ configuration should work for all boards based on a STM32F4xx MCU with a
 ST-LINKv2 interface. You can override the path to this configuration by setting
 `OPENOCD_CONFIG` in your Makefile or on the command line.
 
+### Flashing the Firmware with STM Flash Loader
+
+Another option to flash firmware to target board with UART is the Flash Loader Demo Programm from ST.com. 
+Download the Flash Loader Demo from [stlink] https://www.st.com/en/development-tools/flasher-stm32.html and connect the board to an FTDI Converter.
+Set the board in DFU Mode by jumper the boot0 pin to 3.3V and connect the FTDI Converter to the UART(3) Interface of the STM32F4xx Board. Make sure you set the jumper from FTDI Converter to 3.3V Levels. 
+Erase the memory of the board and flash the compiled firmware (.bin or .hex) to the board. 
+
 Accessing the board
 -------------------
 
